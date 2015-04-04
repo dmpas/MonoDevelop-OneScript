@@ -1,0 +1,6 @@
+build/
+packages/
+*~
+
+OneScriptBinding.userprefs
+obj/

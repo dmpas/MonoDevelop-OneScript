@@ -1,0 +1,58 @@
+<ExtensionModel>
+
+	<Extension path = "/MonoDevelop/ProjectModel/MSBuildItemTypes">
+		<DotNetProject 
+			language="OneScript" 
+			extension="osproj" 
+			guid="{C3C0260E-4F47-423D-A39C-66C37153F851}" 
+			resourceHandler="OneScript.MonoBinding.OneScriptResourceIdBuilder"/>
+	</Extension>
+
+  	<Extension path = "/MonoDevelop/Ide/FileFilters">
+		<FileFilter id = "OneScript"
+			insertbefore = "AllFiles"
+			_label = "OneScript Files"
+			extensions = "*.os"/>
+	</Extension>
+
+	<Extension path = "/MonoDevelop/Ide/FileTemplates">
+		<FileTemplate id = "EmptyOneScriptFile" resource = "EmptyOneScriptFile.xft.xml"/>
+	</Extension>
+
+	<Extension path = "/MonoDevelop/Ide/ProjectTemplates">
+		<ProjectTemplate id = "EmptyOneScriptProject" resource = "EmptyOneScriptProject.xpt.xml"/>
+		<ProjectTemplate id = "OneScriptConsoleApplicationProject" resource = "OneScriptConsoleApplicationProject.xpt.xml"/>
+	</Extension>
+  
+	<Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/General">
+		<Condition id="ActiveLanguage" value="OneScript">
+			<Panel id = "OneScriptProjectOptionsPanel"
+				_label = "General Options" 
+				class = "OneScript.MonoBinding.ProjectOptionsPanel"/>
+			<Panel id = "OneScriptOutputOptionsPanel"
+				_label = "Imports" 
+				class = "OneScript.MonoBinding.ImportOptionsPanel"/>
+		</Condition>
+	</Extension>
+
+	<Extension path = "/MonoDevelop/ProjectModel/LanguageBindings">
+		<LanguageBinding id = "OneScript"
+			supportedextensions = ".os"
+			class = "OneScript.MonoBinding.OneScriptLanguageBinding" />
+	</Extension>
+
+	<Extension path = "/MonoDevelop/Core/StockIcons">
+		<StockIcon stockid = "md-os-file" icon = "md-file-source" size="Menu" />
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/Core/MimeTypes">
+		<MimeType id="text/x-oscript" _description="OneScript source code" isText="true">
+			<File pattern="*.os" />
+		</MimeType>
+	</Extension>
+  
+	<Extension path = "/MonoDevelop/SourceEditor2/SyntaxModes">
+		<Templates resource="OneScriptSyntaxMode.xml" />
+	</Extension>
+
+</ExtensionModel>
