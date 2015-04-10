@@ -22,11 +22,16 @@
 
 	<Extension path = "/MonoDevelop/Ide/ProjectTemplates">
 		<ProjectTemplate id = "EmptyOneScriptProject" resource = "EmptyOneScriptProject.xpt.xml"/>
-		<ProjectTemplate id = "OneScriptConsoleApplicationProject" resource = "OneScriptConsoleApplicationProject.xpt.xml"/>
+		<ProjectTemplate id = "OneScriptConsoleApplicationProject" resource = "ConsoleApplicationProject.xpt.xml"/>
 	</Extension>
   
 	<Extension path = "/MonoDevelop/ProjectModel/ProjectBindings">
-		<ProjectBinding id = "OneScriptProject" class = "OneScript.MonoBinding.OneScriptProjectBinding" />
+		<ProjectBinding id = "OneScriptProject" class = "OneScript.MonoBinding.ProjectBinding" />
+	</Extension>
+
+	<Extension path = "/MonoDevelop/ProjectModel/SerializableClasses">
+		<DataType class = "OneScript.MonoBinding.OneScriptProject" />
+		<DataType class = "OneScript.MonoBinding.Configuration" />
 	</Extension>
 
 	<!-- Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/General">
@@ -43,7 +48,7 @@
 	<Extension path = "/MonoDevelop/ProjectModel/LanguageBindings">
 		<LanguageBinding id = "OneScript"
 			supportedextensions = ".os"
-			class = "OneScript.MonoBinding.OneScriptLanguageBinding" />
+			class = "OneScript.MonoBinding.LanguageBinding" />
 	</Extension>
 
 	<Extension path = "/MonoDevelop/Core/StockIcons">

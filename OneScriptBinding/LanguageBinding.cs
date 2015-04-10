@@ -9,12 +9,9 @@ using System.Collections;
 using System.Diagnostics;
 using System.Xml;
 
-using MonoDevelop.Projects;
-using MonoDevelop.Core;
-
 namespace OneScript.MonoBinding
 {
-    public class OneScriptLanguageBinding : ILanguageBinding
+    public class LanguageBinding : MonoDevelop.Projects.ILanguageBinding
 	{
 		public const string LanguageName = "OneScript";
 		
@@ -30,7 +27,7 @@ namespace OneScript.MonoBinding
 			}
 		}
 		
-		public bool IsSourceCodeFile (FilePath fileName)
+        public bool IsSourceCodeFile (MonoDevelop.Core.FilePath fileName)
 		{
 			return Path.GetExtension(fileName) == ".os";
 		}
@@ -39,7 +36,7 @@ namespace OneScript.MonoBinding
 		public string BlockCommentStartTag { get { return "/*"; } }
 		public string BlockCommentEndTag { get { return "*/"; } }
 	
-		public FilePath GetFileName (FilePath baseName)
+        public MonoDevelop.Core.FilePath GetFileName (MonoDevelop.Core.FilePath baseName)
 		{
 			return baseName + ".os";
 		}   

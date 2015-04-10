@@ -1,10 +1,8 @@
 ﻿using System;
-using MonoDevelop.Projects;
-
 
 namespace OneScript.MonoBinding
 {
-    public class OneScriptProject : Project
+    public class OneScriptProject : MonoDevelop.Projects.Project
     {
         private const string ProjectTypeName = "OneScript";
 
@@ -29,9 +27,9 @@ namespace OneScript.MonoBinding
             return false;
         }
 
-        public override SolutionItemConfiguration CreateConfiguration( string name )
+        public override MonoDevelop.Projects.SolutionItemConfiguration CreateConfiguration( string name )
         {
-            return new OneScriptProjectConfiguration( name );
+            return new ProjectConfiguration( name );
         }
     }
 }

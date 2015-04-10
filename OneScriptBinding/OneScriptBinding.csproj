@@ -81,17 +81,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="AddinInfo.cs" />
-    <Compile Include="OneScriptLanguageBinding.cs" />
+    <Compile Include="Project\ProjectConfiguration.cs" />
+    <Compile Include="Project\ProjectBinding.cs" />
+    <Compile Include="LanguageBinding.cs" />
     <Compile Include="Project\OneScriptProject.cs" />
-    <Compile Include="Project\OneScriptProjectBinding.cs" />
-    <Compile Include="Project\OneScriptProjectConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="gtk-gui\gui.stetic">
-      <LogicalName>gui.stetic</LogicalName>
-    </EmbeddedResource>
     <EmbeddedResource Include="OneScriptBinding.addin.xml">
       <LogicalName>OneScriptBinding.addin.xml</LogicalName>
       <DeployService-Deploy>True</DeployService-Deploy>
@@ -102,12 +98,12 @@
     <EmbeddedResource Include="templates\EmptyOneScriptProject.xpt.xml">
       <LogicalName>EmptyOneScriptProject.xpt.xml</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="templates\OneScriptConsoleApplicationProject.xpt.xml">
-      <LogicalName>OneScriptConsoleApplicationProject.xpt.xml</LogicalName>
-    </EmbeddedResource>
     <EmbeddedResource Include="OneScriptSyntaxMode.xml">
       <LogicalName>OneScriptSyntaxMode.xml</LogicalName>
       <DeployService-Deploy>True</DeployService-Deploy>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\ConsoleApplicationProject.xpt.xml">
+      <LogicalName>OneScriptConsoleApplicationProject.xpt.xml</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
