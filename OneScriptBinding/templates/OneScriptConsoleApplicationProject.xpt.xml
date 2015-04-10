@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Template originator   = "Sergey Batanov" 
           created      = "2015-04-01"
-          lastModified = "2015-04-01">
+          lastModified = "2015-04-06">
 	
 	<!-- Template Header -->
 	<TemplateConfiguration>
 		<_Name>Console Project</_Name>
-		<Category>other/net/general</Category>
+		<_Category>OneScript/general</_Category>
 		<Icon>md-project-console</Icon>
 		<Image id="md-console-project" />
 		<LanguageName>OneScript</LanguageName>
@@ -26,7 +26,7 @@
 			<StartupProject>${ProjectName}</StartupProject>
 		</Options>
 		
-		<Project name = "${ProjectName}" directory = ".">
+		<Project name = "${ProjectName}" directory = "." type="OneScript" >
 			<Options ExternalConsole="True"/>
 			<References>
 				<Reference type="Package" refto="System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />

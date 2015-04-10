@@ -5,8 +5,9 @@
 			language="OneScript" 
 			extension="osproj" 
 			guid="{C3C0260E-4F47-423D-A39C-66C37153F851}" 
-			resourceHandler="OneScript.MonoBinding.OneScriptResourceIdBuilder"/>
+			/>
 	</Extension>
+	<!-- resourceHandler="OneScript.MonoBinding.OneScriptResourceIdBuilder" -->
 
   	<Extension path = "/MonoDevelop/Ide/FileFilters">
 		<FileFilter id = "OneScript"
@@ -24,7 +25,11 @@
 		<ProjectTemplate id = "OneScriptConsoleApplicationProject" resource = "OneScriptConsoleApplicationProject.xpt.xml"/>
 	</Extension>
   
-	<Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/General">
+	<Extension path = "/MonoDevelop/ProjectModel/ProjectBindings">
+		<ProjectBinding id = "OneScriptProject" class = "OneScript.MonoBinding.OneScriptProjectBinding" />
+	</Extension>
+
+	<!-- Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/General">
 		<Condition id="ActiveLanguage" value="OneScript">
 			<Panel id = "OneScriptProjectOptionsPanel"
 				_label = "General Options" 
@@ -33,7 +38,7 @@
 				_label = "Imports" 
 				class = "OneScript.MonoBinding.ImportOptionsPanel"/>
 		</Condition>
-	</Extension>
+	</Extension -->
 
 	<Extension path = "/MonoDevelop/ProjectModel/LanguageBindings">
 		<LanguageBinding id = "OneScript"

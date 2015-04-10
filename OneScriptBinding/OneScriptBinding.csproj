@@ -84,6 +84,8 @@
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="AddinInfo.cs" />
     <Compile Include="OneScriptLanguageBinding.cs" />
+    <Compile Include="Project\OneScriptProject.cs" />
+    <Compile Include="Project\OneScriptProjectBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -110,5 +112,6 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="icons\" />
+    <Folder Include="Project\" />
   </ItemGroup>
 </Project>

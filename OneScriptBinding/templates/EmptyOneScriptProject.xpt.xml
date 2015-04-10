@@ -6,7 +6,7 @@
 	<!-- Template Header -->
 	<TemplateConfiguration>
                 <_Name>Empty Project</_Name>
-                <Category>other/net/general</Category>
+                <_Category>OneScript/general</_Category>
                 <Icon>md-project</Icon>
                 <LanguageName>OneScript</LanguageName>
                 <_Description>Creates an empty OneScript solution.</_Description>
@@ -16,6 +16,6 @@
 	
 	<!-- Template Content -->
 	<Combine name = "${ProjectName}" directory = ".">
-		<Project name = "${ProjectName}" directory = "."/>
+		<Project name = "${ProjectName}" directory = "." type="OneScript" />
 	</Combine>
 </Template>
