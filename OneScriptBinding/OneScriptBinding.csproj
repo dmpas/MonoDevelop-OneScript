@@ -103,7 +103,7 @@
       <DeployService-Deploy>True</DeployService-Deploy>
     </EmbeddedResource>
     <EmbeddedResource Include="templates\ConsoleApplicationProject.xpt.xml">
-      <LogicalName>OneScriptConsoleApplicationProject.xpt.xml</LogicalName>
+      <LogicalName>ConsoleApplicationProject.xpt.xml</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
