@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
-<Template Originator="Sergey Batanov" Language="OneScript" Created="2015-04-01" LastModified="2015-04-01">
+<Template Originator="Sergey Batanov" Language="OneScript" 
+		Created="2015-04-01"
+		LastModified="2015-04-10" >
 	
 	<TemplateConfiguration>
                 <_Name>Empty File</_Name>
@@ -13,7 +15,6 @@
 	<TemplateFiles>
         <File DefaultExtension=".os" AddStandardHeader="True">
 <![CDATA[
-
 Процедура Погнали()
 	Сообщить("Здорово, Витёк!")
 
@@ -21,7 +22,6 @@
 	EndIf;
 
 КонецПроцедуры
-
 ]]>
         </File>
 	</TemplateFiles>

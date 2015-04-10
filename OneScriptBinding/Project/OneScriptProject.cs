@@ -12,6 +12,11 @@ namespace OneScript.MonoBinding
         {
         }
 
+        public OneScriptProject(string DefaultConfiguration)
+        {
+            Configurations.Add(CreateConfiguration(DefaultConfiguration));
+        }
+
         public override System.Collections.Generic.IEnumerable<string> GetProjectTypes()
         {
             var typeList = new System.Collections.Generic.List<string>();
@@ -22,6 +27,11 @@ namespace OneScript.MonoBinding
         public override bool IsCompileable(string file_name)
         {
             return false;
+        }
+
+        public override SolutionItemConfiguration CreateConfiguration( string name )
+        {
+            return new OneScriptProjectConfiguration( name );
         }
     }
 }

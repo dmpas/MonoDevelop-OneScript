@@ -86,6 +86,7 @@
     <Compile Include="OneScriptLanguageBinding.cs" />
     <Compile Include="Project\OneScriptProject.cs" />
     <Compile Include="Project\OneScriptProjectBinding.cs" />
+    <Compile Include="Project\OneScriptProjectConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
