@@ -1,0 +1,7 @@
+<AddinProject appVersion="2.4">
+	<Project>
+		<AddinFile>build/AddIns/BackendBindings/OneScript.MonoBinding.dll</AddinFile>
+		<BuildFile>OneScriptBinding/OneScriptBinding.sln</BuildFile>
+		<BuildConfiguration>Debug</BuildConfiguration>
+	</Project>
+</AddinProject>
