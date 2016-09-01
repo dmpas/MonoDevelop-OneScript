@@ -1,0 +1,151 @@
+<SyntaxMode name = "OneScript" mimeTypes="text/x-oscript" ignorecase="True">
+	<Property name="LineComment">//</Property>
+	<Property name="StringQuote">"</Property>
+	
+	<EolSpan color = "Preprocessor" rule="text.preprocessor">#</EolSpan>
+	<EolSpan color = "Comment(Line)" rule="Comment">//</EolSpan>
+
+	<Span color = "Comment(Block)" rule="Comment">
+		<Begin>/*</Begin>
+		<End>*/</End>
+	</Span>
+	
+	<Span color = "String" rule="String" stopateol = "true" escape='\"'>
+		<Begin>"</Begin>
+		<End>"</End>
+	</Span>
+	
+	<!-- Span color = "String" rule="String" stopateol = "true" escape='\"'>
+		<Begin firstNonWs="True">||</Begin>
+		<End>"</End>
+	</Span -->
+	
+
+	<Keywords color = "Keyword(Operator)">
+		<Word>And</Word>
+		<Word>New</Word>
+		<Word>Not</Word>
+		<Word>Or</Word>
+
+		<Word>И</Word>
+		<Word>Новый</Word>
+		<Word>Не</Word>
+		<Word>Или</Word>
+	</Keywords>
+	
+	<Keywords color = "Keyword(Selection)">
+		<Word>Export</Word>
+		<Word>Procedure</Word>
+		<Word>Function</Word>
+		<Word>If</Word>
+		<Word>Then</Word>
+		<Word>Else</Word>
+		<Word>ElseIf</Word>
+		<Word>EndIf</Word>
+		<Word>EndProcedure</Word>
+		<Word>EndFunction</Word>
+		<Word>Var</Word>
+
+		<Word>Экспорт</Word>
+		<Word>Процедура</Word>
+		<Word>Функция</Word>
+		<Word>Если</Word>
+		<Word>Тогда</Word>
+		<Word>Иначе</Word>
+		<Word>ИначеЕсли</Word>
+		<Word>КонецЕсли</Word>
+		<Word>КонецПроцедуры</Word>
+		<Word>КонецФункции</Word>
+		<Word>Перем</Word>
+	</Keywords>
+	
+	<Keywords color = "Keyword(Iteration)">
+		<Word>For</Word>
+		<Word>To</Word>
+		<Word>Each</Word>
+		<Word>In</Word>
+		<Word>Next</Word>
+		
+		<Word>Do</Word>
+		<Word>While</Word>
+		<Word>EndDo</Word>
+
+		<Word>Для</Word>
+		<Word>По</Word>
+		<Word>Каждого</Word>
+		<Word>Из</Word>
+		<Word>Цикл</Word>
+		<Word>Пока</Word>
+		<Word>КонецЦикла</Word>
+
+	</Keywords>
+	
+	<Keywords color = "Keyword(Jump)">
+		<Word>GoTo</Word>
+		<Word>Continue</Word>
+		<Word>Break</Word>
+		<Word>Return</Word>
+
+		<Word>Перейти</Word>
+		<Word>Продолжить</Word>
+		<Word>Прервать</Word>
+		<Word>Возврат</Word>
+	</Keywords>
+
+	<Keywords color = "Keyword(Exception)">
+		<Word>Try</Word>
+		<Word>Exception</Word>
+		<Word>EndTry</Word>
+		<Word>RaiseException</Word>
+
+		<Word>Попытка</Word>
+		<Word>Исключение</Word>
+		<Word>КонецПопытки</Word>
+		<Word>ВызватьИсключение</Word>
+	</Keywords>
+	
+	<Keywords color = "Keyword(Constants)">
+		<Word>False</Word>
+		<Word>Undefined</Word>
+		<Word>True</Word>
+		<Word>Null</Word>
+
+		<Word>Ложь</Word>
+		<Word>Неопределено</Word>
+		<Word>Истина</Word>
+	</Keywords>
+
+	<Keywords color = "Keyword(Parameter)">
+		<Word>ByVal</Word>
+		<Word>Знач</Word>
+	</Keywords>
+
+	<Rule name = "text.preprocessor">
+		<Keywords color="Preprocessor">
+			<Word>if</Word>
+			<Word>else</Word>
+			<Word>elseif</Word>
+			<Word>endif</Word>
+			<Word>если</Word>
+			<Word>иначе</Word>
+			<Word>иначеесли</Word>
+			<Word>конецесли</Word>
+		</Keywords>
+	</Rule>
+	
+	<Rule name = "Comment">
+		<Keywords color="Comment Tag">
+			<Word>НАДО</Word>
+			<Word>TODO</Word>
+			<Word>FIXME</Word>
+			<Word>HACK</Word>
+			<Word>UNDONE</Word>
+		</Keywords>	
+	</Rule>
+	
+	<Rule name = "String">
+	</Rule>
+	<Rule name = "String2">
+	</Rule>
+	
+</SyntaxMode>
