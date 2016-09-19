@@ -1,11 +1,10 @@
-
 using System;
 using Mono.Addins;
 using Mono.Addins.Description;
 
 [assembly:Addin ("OneScriptBinding", 
 	Namespace = "OneScript",
-	Version = MonoDevelop.BuildInfo.Version,
+	Version = "0.1.0",
 	Category = "Language bindings")]
 
 [assembly:AddinName ("OneScript Language Binding")]
