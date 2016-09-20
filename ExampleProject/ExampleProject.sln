@@ -1,0 +1,11 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{C3C0260E-4F47-423D-A39C-66C37153F851}") = "ExampleProject", "ExampleProject\ExampleProject.osproj", "{B97E4BBE-E5C9-4F7A-89AD-DD00FA0D2F1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+EndGlobal
