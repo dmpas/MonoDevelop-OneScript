@@ -81,6 +81,9 @@
     <EmbeddedResource Include="templates\ConsoleApplicationProject.xpt.xml">
       <LogicalName>ConsoleApplicationProject.xpt.xml</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="templates\OneScriptLibraryProject.xpt.xml">
+      <LogicalName>OneScriptLibraryProject.xpt.xml</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

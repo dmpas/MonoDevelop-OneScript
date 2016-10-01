@@ -1,0 +1,50 @@
+﻿<?xml version="1.0"?>
+<Template originator   = "Sergey Batanov" 
+          created      = "2016-10-01"
+          lastModified = "2016-10-01">
+	
+	<!-- Template Header -->
+	<TemplateConfiguration>
+        <_Name>Empty Library</_Name>
+        <Category>other/misc/general</Category>
+        <Icon>md-project-library</Icon>
+        <LanguageName>OneScript</LanguageName>
+        <_Description>Creates an empty OneScript library.</_Description>
+        <DefaultFilename>EmptyOneScriptLibrary</DefaultFilename>
+        <GroupId>md-project-library</GroupId>
+	</TemplateConfiguration>
+	
+	<!-- Actions -->
+	<Actions>
+		<Open filename = "packagedef"/>
+	</Actions>
+
+	<!-- Template Content -->
+	<Combine name = "${ProjectName}" directory = ".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		
+		<Project name = "${ProjectName}" directory = "." type="OneScript" >
+			<Files>
+				<Directory name="src" />
+				<Directory name="tests" />
+				<File name = "lib.config" AddStandardHeader="False">
+<![CDATA[<?xml version='1.0'?>
+<package-def>
+	<!-- module name="ИмяМодуля" file="src/module.os" -->
+	<!-- class name="ИмяКласса" file="src/class.os" -->
+</package-def>
+]]></File>	
+		<File name = "packagedef" AddStandardHeader="False" DefaultExtension="" >
+<![CDATA[Описание.Имя("${ProjectName}")
+	.Версия("0.0.0")
+	.ВключитьФайл("src")
+	.ВключитьФайл("tests")
+	.ВключитьФайл("lib.config")
+]]></File>
+			</Files>
+		</Project>
+	</Combine>
+
+</Template>

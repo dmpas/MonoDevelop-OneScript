@@ -1,10 +1,12 @@
 <ExtensionModel>
 
 	<Extension path = "/MonoDevelop/ProjectModel/MSBuildItemTypes">
-		<DotNetProject 
-			language="OneScript" 
+		<ProjectType 
 			extension="osproj" 
 			guid="{C3C0260E-4F47-423D-A39C-66C37153F851}" 
+			alias="OneScript" 
+			type="OneScript.MonoBinding.OneScriptProject"
+			msbuildsupport="NotSupported"
 			/>
 	</Extension>
 	<!-- resourceHandler="OneScript.MonoBinding.OneScriptResourceIdBuilder" -->
@@ -23,6 +25,7 @@
 	<Extension path = "/MonoDevelop/Ide/ProjectTemplates">
 		<ProjectTemplate id = "EmptyOneScriptProject" resource = "EmptyOneScriptProject.xpt.xml"/>
 		<ProjectTemplate id = "OneScriptConsoleApplicationProject" resource = "ConsoleApplicationProject.xpt.xml"/>
+		<ProjectTemplate id = "OneScriptLibraryProject" resource = "OneScriptLibraryProject.xpt.xml"/>
 	</Extension>
   
 	<Extension path = "/MonoDevelop/ProjectModel/ProjectBindings">
