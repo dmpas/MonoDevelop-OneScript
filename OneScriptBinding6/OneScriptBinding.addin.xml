@@ -44,6 +44,10 @@
 			singleLineCommentTag = "//" />
 	</Extension>
 
+	<Extension path = "/MonoDevelop/TypeSystem/FoldingParser">
+		<Parser class = "OneScript.MonoBinding.OneScriptFoldingParser" mimeType="text/x-oscript" />
+	</Extension>
+	
 	<Extension path = "/MonoDevelop/Core/StockIcons">
 		<StockIcon stockid = "md-os-file" icon = "md-file-source" size="Menu" />
 	</Extension>
