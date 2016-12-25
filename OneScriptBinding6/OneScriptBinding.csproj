@@ -54,20 +54,26 @@
     <Reference Include="MonoDevelop.Ide">
       <HintPath>..\..\..\..\..\Program Files %28x86%29\Xamarin Studio\bin\MonoDevelop.Ide.dll</HintPath>
     </Reference>
+    <Reference Include="ScriptEngine">
+      <HintPath>packages\ScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="ScriptEngine.HostedScript">
+      <HintPath>packages\ScriptEngine.HostedScript.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="AddinInfo.cs" />
-    <Compile Include="Project\OneScriptProjectFactory.cs" />
     <Compile Include="Project\OneScriptCompilerParameters.cs" />
     <Compile Include="Project\OneScriptProject.cs" />
     <Compile Include="Parser\OneScriptFoldingParser.cs" />
+    <Compile Include="Language\OneScriptCodeProvider.cs" />
+    <Compile Include="Language\OneScriptEngineProvider.cs" />
+    <Compile Include="Language\OneScriptCodeGenerator.cs" />
+    <Compile Include="Language\OneScriptCompilerService.cs" />
+    <Compile Include="Project\OneScriptProjectFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="OneScriptBinding.addin.xml">
-      <LogicalName>OneScriptBinding.addin.xml</LogicalName>
-      <DeployService-Deploy>True</DeployService-Deploy>
-    </EmbeddedResource>
     <EmbeddedResource Include="templates\EmptyOneScriptFile.xft.xml">
       <LogicalName>EmptyOneScriptFile.xft.xml</LogicalName>
     </EmbeddedResource>
@@ -81,11 +87,22 @@
     <EmbeddedResource Include="templates\ConsoleApplicationProject.xpt.xml">
       <LogicalName>ConsoleApplicationProject.xpt.xml</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="packages\StandaloneRunner.exe">
+      <LogicalName>OneScript.MonoBinding.StandaloneRunner.exe</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneScriptBinding.addin.xml">
+      <LogicalName>OneScriptBinding.addin.xml</LogicalName>
+      <DeployService-Deploy>True</DeployService-Deploy>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="icons\" />
     <Folder Include="Project\" />
     <Folder Include="Parser\" />
+    <Folder Include="Language\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddinReference Include="MonoDevelop.AddinMaker" />
   </ItemGroup>
 </Project>

@@ -5,7 +5,10 @@ Project("{C3C0260E-4F47-423D-A39C-66C37153F851}") = "ExampleProject", "ExamplePr
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Main|Any CPU = Main|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B97E4BBE-E5C9-4F7A-89AD-DD00FA0D2F1A}.Main|Any CPU.ActiveCfg = Main|Any CPU
+		{B97E4BBE-E5C9-4F7A-89AD-DD00FA0D2F1A}.Main|Any CPU.Build.0 = Main|Any CPU
 	EndGlobalSection
 EndGlobal

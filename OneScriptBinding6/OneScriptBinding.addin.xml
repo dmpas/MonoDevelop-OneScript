@@ -1,13 +1,14 @@
 <ExtensionModel>
 
 	<!-- MSBuildItemTypes -->
-	<!-- Extension path = "/MonoDevelop/ProjectModel/ProjectBindings" -->
-	<!--			language="OneScript" -->
-	<Extension path = "/MonoDevelop/ProjectModel/MSBuildItemTypes">
-		<ProjectType 
-			extension="osproj" 
-			guid="{C3C0260E-4F47-423D-A39C-66C37153F851}" 
+	<!-- Extension path = "/MonoDevelop/ProjectModel/ProjectBindings"
 			alias="OneScript"
+	language="OneScript" -->
+	<Extension path = "/MonoDevelop/ProjectModel/MSBuildItemTypes">
+		<DotNetProjectType 
+			language="OneScript"
+			extension="osproj"
+			guid="{C3C0260E-4F47-423D-A39C-66C37153F851}"
 			type="OneScript.MonoBinding.OneScriptProject"
 			msbuildSupport="NotSupported"
 			/>
@@ -30,18 +31,20 @@
 		<ProjectTemplate id = "OneScriptConsoleApplicationProject" resource = "ConsoleApplicationProject.xpt.xml"/>
 	</Extension>
   
-	<!-- Extension path = "/MonoDevelop/ProjectModel/ProjectBindings">
+	<!--Extension path = "/MonoDevelop/ProjectModel/ProjectBindings">
 		<ProjectBinding id = "OneScriptProject" class = "OneScript.MonoBinding.ProjectBinding" />
-	</Extension -->
+	</Extension-->
 
-	<!-- Extension path = "/MonoDevelop/ProjectModel/SerializableClasses">
+	<Extension path = "/MonoDevelop/ProjectModel/SerializableClasses">
 		<DataType class = "OneScript.MonoBinding.OneScriptCompilerParameters" />
-	</Extension -->
+	</Extension>
 
 	<Extension path = "/MonoDevelop/ProjectModel/LanguageBindings">
 		<LanguageBinding id = "OneScript"
 			extensions = ".os"
-			singleLineCommentTag = "//" />
+			singleLineCommentTag = "//"
+			codeDomType = "OneScript.MonoBinding.CodeProvider"
+			/>
 	</Extension>
 
 	<Extension path = "/MonoDevelop/TypeSystem/FoldingParser">
@@ -55,6 +58,9 @@
 	<Extension path = "/MonoDevelop/Core/MimeTypes">
 		<MimeType id="text/x-oscript" _description="OneScript source code" isText="true">
 			<File pattern="*.os" />
+		</MimeType>
+		<MimeType id="application/x-osproject" _description="OneScript project file" baseType="application/x-msbuild">
+			<File pattern="*.osproj" />
 		</MimeType>
 	</Extension>
   
